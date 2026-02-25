@@ -1,5 +1,7 @@
-import express, { Application } from 'express'
 import dotenv from 'dotenv'
+dotenv.config();
+
+import express, { Application } from 'express'
 import path from 'path'
 import cors from 'cors'
 import methodOverride from 'method-override'
@@ -7,8 +9,6 @@ import { engine } from 'express-handlebars'
 import apiRoutes from './routes' // Existing API routes
 import uiRoutes from './routes/ui' // New UI routes
 import connectDB from './config/db'
-
-dotenv.config();
 
 const app: Application = express()
 
